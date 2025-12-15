@@ -1,50 +1,78 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chris Website</title>
+    <title>Welcome to Chris's Website</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #f5f5f5;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
         }
         
-        .basketball-icon {
-            font-size: 80px;
-            margin-bottom: 30px;
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+        
+        .smiley {
+            font-size: 4rem;
+            margin-bottom: 1rem;
             animation: bounce 2s infinite;
         }
         
-        .message {
-            font-size: 24px;
+        h1 {
             color: #333;
-            font-weight: 300;
-            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            font-size: 2.2rem;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.6;
         }
         
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 600px) {
+            .container {
+                margin: 1rem;
+                padding: 2rem;
             }
-            40% {
-                transform: translateY(-20px);
+            
+            h1 {
+                font-size: 1.8rem;
             }
-            60% {
-                transform: translateY(-10px);
+            
+            .smiley {
+                font-size: 3rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="basketball-icon">🏀</div>
-    <div class="message">Chris Website :)</div>
+    <div class="container">
+        <div class="smiley">😊</div>
+        <h1>Welcome to Chris's Website</h1>
+        <p class="subtitle">
+            Hello! This is Chris's personal space on the web.<br>
+            More exciting content is coming soon!
+        </p>
+    </div>
 </body>
 </html>
